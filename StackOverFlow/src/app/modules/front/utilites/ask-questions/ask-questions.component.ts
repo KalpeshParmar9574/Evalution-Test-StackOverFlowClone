@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { askQuestion } from 'src/app/Model/askQuestionModel';
+import { UtilitiesService } from 'src/app/services/utilities.service';
 
 @Component({
   selector: 'app-ask-questions',
@@ -10,7 +11,8 @@ import { askQuestion } from 'src/app/Model/askQuestionModel';
 export class AskQuestionsComponent {
   questionFrom!: FormGroup
   userData!:any
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder,
+  private utilService:UtilitiesService) { }
 
   ngOnInit() {
     this._initForm()
@@ -49,7 +51,11 @@ export class AskQuestionsComponent {
       createdAt: new Date().toLocaleString(),
       answers: []
     }
+    this.utilService._postQuestion(body).subscribe((res) => {
+      alert('question added successfully')
+    })
 
+    
    
     
   }
