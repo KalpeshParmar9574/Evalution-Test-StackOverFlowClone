@@ -1,0 +1,30 @@
+<div class="container">
+    <form [formGroup]="questionFrom" >
+        <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Title</label><br>
+            <small>Be specific and imagine you’re asking a question to another person.</small>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder" formControlName="title">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">What are the details of your problem?</label> <br> <small>Introduce the problem and expand on what you put in the title. Minimum 20 characters.</small>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" formControlName="details"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">What did you try and what you expecting?</label> <br> <small>Describe what you tried, what you expected to happen, and what actually resulted. Minimum 20 characters..</small>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" formControlName="trying"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Tags</label><br>
+            <small>Be specific and imagine you’re asking a question to another person.</small>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder" formControlName="tags">
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Review questions already on Stack Overflow to see if your question is a duplicate.
+
+            </label><br>
+            <small>Clicking on these questions will open them in a new tab for you to review. Your progress here will be saved so you can come back and continue..</small>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder" formControlName="QalradyExist">
+          </div>
+          <button class="btn btn-info" type="submit" (click)="_postQuestion()">post question</button>
+    </form>
+</div>
