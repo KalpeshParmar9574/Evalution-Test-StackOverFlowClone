@@ -38,7 +38,7 @@ export class AskQuestionsComponent {
 
     const body:askQuestion = {
       userID:this.userData.id,
-      userName: this.userData.username,
+      userName: this.userData.displayName,
       vote: 0,
       view: 0,
       title: data.title,
@@ -50,7 +50,7 @@ export class AskQuestionsComponent {
       answers: []
     }
 
-    console.log(body);
+   
     
   }
 }
