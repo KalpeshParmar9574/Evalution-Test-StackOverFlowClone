@@ -20,7 +20,17 @@ export class UtilitiesService {
         new Error(error)
       })
     }
-
-
+  
   }
+
+  _getQuetions(){
+     try {
+      return this.http.get<any>(this.baseURL+this.qURL)
+     } catch (error:any) {
+      return throwError(() => {
+        new Error(error)
+      })
+     } 
+  }
+  
 }

@@ -13,5 +13,25 @@
       "id": 2
     }
   ],
-  "Questions":[]
+  "Questions": [
+    {
+      "userID": 1,
+      "userName": "kp@123",
+      "vote": 0,
+      "view": 0,
+      "title": "first question ",
+      "qDescrition": "implementing interceptor in angular ",
+      "tryandExpectation": "code of with the explanation",
+      "tags": [
+        "js ",
+        "angular ",
+        "interceptor",
+        "ts"
+      ],
+      "alreadyExiste": "",
+      "createdAt": "4/12/2023, 9:45:24 PM",
+      "answers": [],
+      "id": 1
+    }
+  ]
 }

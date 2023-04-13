@@ -10,17 +10,17 @@
         <div class="col col-md-7">filter options</div>
         <div class="col-2">filter</div>
     </div>
-    <div class="container d-flex mt-3 question_container" >
+    <div class="container d-flex mt-4 question_container" *ngFor="let question of questionData" >
         <div>
-            <ul><li>vote</li>
-            <li>answer</li>
-        <li>view</li></ul>
+            <ul><li><span class="text-success">{{question.vote}}</span>  <small>Vote</small> </li>
+            <li> <span class="text-danger"> {{question.answers.length}}</span> <small>Answers</small> </li>
+        <li><span class="text-dark">{{question.view}} </span> <small> Views</small></li></ul>
         
         </div>
             <div class="mx-5">
-                <a href="">Qestion title fdghjkl;pokijhugfvbhjkloiuygfvhbnjkoiuytgfvbhjnkoiuygfc</a><br>
-                <span class="badge text-bg-info">Tags</span>
-                <div class="d-flex" id="userInfo"> <p class="me-2">username</p><p class="me-2">askquestion </p> <p>time</p></div>
+                <a [routerLink]="">{{question.title}}</a><br>
+               <span *ngFor="let tags of question.tags"> <span class="badge text-bg-info mx-2">{{tags}}</span></span> 
+                <div class="d-flex" id="userInfo"> <p class="me-2">{{question.userName}}</p> <p>{{question.createdAt|date}}</p></div>
             </div>
     </div>
 
